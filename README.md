@@ -9,8 +9,6 @@
 Interactive data analytics dashboard analysing 1090 IPL matches
 and 179,000+ ball-by-ball deliveries from 2008 to 2020.
 
-🔗 **[Live Demo](YOUR_STREAMLIT_URL)**
-
 ---
 
 ## Key Insights Found
