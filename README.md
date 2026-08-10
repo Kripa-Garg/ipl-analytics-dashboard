@@ -1,6 +1,6 @@
 # 🏏 IPL Analytics Dashboard
 
-An interactive analytics dashboard exploring 17 seasons of Indian Premier League cricket — 1,090 matches and 179,000+ ball-by-ball deliveries (2008–2024) — built with Streamlit and Plotly.
+An interactive analytics dashboard exploring 17 seasons of Indian Premier League cricket- 1,090 matches and 260,000+ ball-by-ball deliveries (2008–2024), built with Streamlit and Plotly.
 
 🔗 **Live App:** [kripa-garg-ipl-analytics-dashboard-app-ieibcd.streamlit.app](https://kripa-garg-ipl-analytics-dashboard-app-ieibcd.streamlit.app/)
 
@@ -14,7 +14,7 @@ The dashboard turns raw match and delivery-level data into an explorable analyti
 
 ## 🔑 Key Finding
 
-Teams batting second win the majority of IPL matches — a consistent edge across venues and seasons. The dashboard tests whether this is driven by winning the toss (it isn't, largely) using a chi-square test of independence between toss decision and match outcome, with the result (χ², degrees of freedom, and p-value) shown directly in the app.
+Teams batting second win the majority of IPL matchesBatting (2nd Win % 52.6%) — a consistent edge across venues and seasons. The dashboard tests whether this is driven by winning the toss (it isn't, largely) using a chi-square test of independence between toss decision and match outcome, with the result (χ², degrees of freedom, and p-value) shown directly in the app.
 
 ---
 
