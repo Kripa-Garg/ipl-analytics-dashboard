@@ -1,63 +1,64 @@
-# IPL Analytics Dashboard 🏏
+# 🏏 IPL Analytics Dashboard
 
-![Python](https://img.shields.io/badge/Python-3.10+-blue)
-![Streamlit](https://img.shields.io/badge/Streamlit-Deployed-red)
-![Plotly](https://img.shields.io/badge/Plotly-Interactive-purple)
+An interactive analytics dashboard exploring 17 seasons of Indian Premier League cricket — 1,090 matches and 179,000+ ball-by-ball deliveries (2008–2024) — built with Streamlit and Plotly.
 
-🔗 **Live App:** https://kripa-garg-ipl-analytics-dashboard-app-ieibcd.streamlit.app/
-
-Interactive data analytics dashboard analysing 1090 IPL matches
-and 179,000+ ball-by-ball deliveries from 2008 to 2020.
+🔗 **Live App:** [kripa-garg-ipl-analytics-dashboard-app-ieibcd.streamlit.app](https://kripa-garg-ipl-analytics-dashboard-app-ieibcd.streamlit.app/)
 
 ---
 
-## Key Insights Found
+## 🎯 Overview
 
-- 🏆 Mumbai Indians won the most IPL titles (5)
-- 🎯 Teams batting second win **X%** of matches overall
-- 📍 Batting second advantage is statistically validated
-  (chi-square test, p < 0.05)
-- 🪙 Toss winners win the match only ~50% of the time —
-  barely better than chance
+The dashboard turns raw match and delivery-level data into an explorable analytics tool — filterable by season, with dedicated views for team performance, batting, bowling, and venue trends. A statistical validation section backs up the headline finding with a chi-square test rather than just eyeballing a chart.
 
 ---
 
-## Dashboard Features
+## 🔑 Key Finding
 
-- Season filter — analyse any combination of seasons
-- 5 interactive Plotly charts with hover details
-- Statistical validation with chi-square test
-- Metric cards showing live summary stats
+Teams batting second win the majority of IPL matches — a consistent edge across venues and seasons. The dashboard tests whether this is driven by winning the toss (it isn't, largely) using a chi-square test of independence between toss decision and match outcome, with the result (χ², degrees of freedom, and p-value) shown directly in the app.
 
 ---
 
-## Tech Stack
+## ✨ Dashboard Features
+
+| Tab | What it shows |
+|---|---|
+| 📊 **Overview** | IPL titles by team, toss-win vs match-win breakdown, total runs per season trend, toss decision trends over time |
+| 🏏 **Team Analysis** | Select any team — matches played, win %, titles, season-by-season win trend, top venues, full head-to-head win % against every opponent |
+| ⚡ **Batting** | Top 15 run scorers, strike rate leaders (min. 500 balls faced), batting-second win % trend by season |
+| 🎳 **Bowling** | Top 15 wicket takers, best economy rates (min. 300 balls bowled), dot-ball % leaders |
+| 🏟️ **Venues** | Batting-second win % by ground (adjustable minimum match threshold), matches hosted per venue, average first-innings score by venue |
+
+Every chart is interactive (hover for details, click legend items to toggle series), and a sidebar season filter re-slices every tab's data live.
+
+---
+
+## 🛠️ Tech Stack
 
 | Tool | Purpose |
-|------|---------|
+|---|---|
 | Python | Core language |
-| Pandas | Data cleaning and merging (250K+ rows) |
-| Plotly Express | Interactive charts |
-| Streamlit | Web dashboard and deployment |
-| SciPy | Chi-square statistical test |
-| PyArrow | Parquet file format for fast loading |
+| Pandas | Data cleaning, merging, and aggregation across 250K+ rows |
+| Plotly Express / Graph Objects | Interactive charts |
+| Streamlit | Web dashboard framework and deployment |
+| SciPy | Chi-square statistical test for the toss/chase analysis |
+| PyArrow (Parquet) | Fast columnar data loading |
 
 ---
 
-## Data Cleaning Highlights
+## 🧹 Data Cleaning Highlights
 
-- Standardised team names across 13 seasons
-  (e.g. "Delhi Daredevils" → "Delhi Capitals")
-- Handled abandoned matches (null winners)
-- Merged ball-by-ball data with match metadata
-- Engineered: toss_match_win, chasing_team_won, win_type columns
+- Standardized team names across 17 seasons of franchise rebranding (e.g. *Delhi Daredevils* → *Delhi Capitals*)
+- Handled abandoned matches with no recorded winner
+- Merged ball-by-ball delivery data with match-level metadata (season, venue, toss, result)
+- Engineered derived columns: `toss_match_win`, `chasing_team_won`, `win_type`
+- Auto-detects schema differences between dataset versions (e.g. `batter` vs `batsman` column naming)
 
 ---
 
-## How to Run Locally
+## 🚀 Run Locally
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/ipl-analytics-dashboard
+git clone https://github.com/Kripa-Garg/ipl-analytics-dashboard.git
 cd ipl-analytics-dashboard
 pip install -r requirements.txt
 streamlit run app.py
@@ -65,6 +66,18 @@ streamlit run app.py
 
 ---
 
-## Author
-**Kripa Garg** — B.Tech AIML
+## 📁 Project Structure
+
+- `app.py` — Streamlit dashboard (data loading, all 5 tabs, statistical validation)
+- `IPL_dashboard.ipynb` — exploratory analysis and data cleaning notebook
+- `matches_clean.parquet` — cleaned match-level dataset
+- `deliveries_full.parquet` — cleaned ball-by-ball delivery dataset
+- `requirements.txt` — Python dependencies
+- `README.md` — this file
+
+---
+
+## 👤 Author
+
+**Kripa Garg** — B.Tech AI/ML
 [GitHub](https://github.com/Kripa-Garg)
