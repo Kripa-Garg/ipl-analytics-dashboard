@@ -4,6 +4,8 @@
 ![Streamlit](https://img.shields.io/badge/Streamlit-Deployed-red)
 ![Plotly](https://img.shields.io/badge/Plotly-Interactive-purple)
 
+🔗 **Live App:** https://kripa-garg-ipl-analytics-dashboard-app-ieibcd.streamlit.app/
+
 Interactive data analytics dashboard analysing 816 IPL matches
 and 179,000+ ball-by-ball deliveries from 2008 to 2020.
 
