@@ -183,7 +183,7 @@ The dashboard will open automatically at `http://localhost:8501`
 B.Tech Artificial Intelligence & Machine Learning
 
 [![GitHub](https://img.shields.io/badge/GitHub-Kripa--Garg-181717?logo=github)](https://github.com/Kripa-Garg)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?logo=linkedin)](https://linkedin.com/in/your-linkedin-here)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?logo=linkedin)](https://www.linkedin.com/in/kripa-garg-4b26a3320/)
 
 ---
 
