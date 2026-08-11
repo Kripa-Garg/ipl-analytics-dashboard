@@ -187,4 +187,3 @@ B.Tech Artificial Intelligence & Machine Learning
 
 ---
 
-*Built as part of an internship preparation portfolio — Python · Data Analysis · Streamlit*
